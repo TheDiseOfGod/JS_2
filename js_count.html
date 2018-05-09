@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js_count</title>
+</head>
+<body>
+	<input id="first-number" type="number" value="0" placeholder="第一个数字">
+	<input id="second-number" type="number" value="0" placeholder="第二个数字">
+	<button id="add-btn">加</button>
+	<button id="minus-btn">减</button>
+	<button id="times-btn">乘</button>
+	<button id="divide-btn">除</button>
+	<p id="result">运算结果</p>
+	<script>
+	document.getElementById("add-btn").onclick = function(){
+		var a = document.getElementById("first-number").value;
+		var b = document.getElementById("second-number").value;
+		document.getElementById("result").innerHTML = Number(a)+Number(b);
+	};
+	document.getElementById("minus-btn").onclick = function(){
+		var a = document.getElementById("first-number").value;
+		var b = document.getElementById("second-number").value;
+		document.getElementById("result").innerHTML = Number(a)-Number(b);
+	};
+	document.getElementById("times-btn").onclick = function(){
+		var a = document.getElementById("first-number").value;
+		var b = document.getElementById("second-number").value;
+		document.getElementById("result").innerHTML = Number(a)*Number(b);
+	};
+	document.getElementById("divide-btn").onclick = function(){
+		var a = document.getElementById("first-number").value;
+		var b = document.getElementById("second-number").value;
+		if (b==0) {console.log("被除数为0错误");
+						document.getElementById("result").innerHTML ="错误";
+					}
+		else{
+			document.getElementById("result").innerHTML = Number(a)/Number(b);
+		}
+		
+	};
+	</script>
+</body>
+</html>
